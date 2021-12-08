@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quarta Página</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--Boxiocns CDN Link-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="btn">
+        <span class='bx bx-menu'></span>
+    </div>
+   <nav class="sidebar">
+       <div class="text">Quarta Página</div>
+       <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="#">Sobre Nós</a></li>
+           <li>
+               <a href="#" class="livros-btn">Livros
+                   <span class='bx bx-chevron-down first'></span>
+               </a>
+               <ul class="livros-show">
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Aventura</a></li>
+                <li><a href="#">Fantasia</a></li>
+               </ul>
+            </li>
+            <li>
+                <a href="#" class="nov-btn">Novidades
+                    <span class='bx bx-chevron-down second'></span>
+                </a>
+                <ul class="nov-show">
+                 <li><a href="#">Inéditos</a></li>
+                 <li><a href="#">agfgh</a></li>
+                </ul>
+             </li>
+             <li><a href="#">Em Alta</a></li>
+       </ul>
+   </nav> 
+
+   <script>
+       $('.btn').click(function(){
+        $(this).toggleClass("click");
+        $('.sidebar').toggleClass("show");
+       });
+       $('.livros-btn').click(function(){
+        $('nav ul .livros-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+       });
+       $('.nov-btn').click(function(){
+        $('nav ul .nov-show').toggleClass("show1");
+        $('nav ul .second').toggleClass("rotate");
+       });
+       $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+       });
+   </script>
+
+</body>
+</html>
