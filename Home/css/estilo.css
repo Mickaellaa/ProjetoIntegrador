@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;900&display=swap');
 
+/*********************************Inicio Menu***************************/
 *{
     padding: 0px;
     margin: 0px;
@@ -14,6 +15,37 @@
     z-index: 999;
 }
 
+.header-1 img{
+    width: 40px;
+}
+
+.header-1 input[type="checkbox"]{
+    display: none;
+}
+
+.header-1 input[type="checkbox"]:checked ~ .mainMenu
+{
+    transform: translateX(350px);
+}
+
+@media(max-width: 800px){
+  .mainMenu ul li{
+      width: 100%;
+      float: none;
+  }
+
+  .mainMenu ul ul{
+      position: static;
+      overflow: hidden;
+      max-height: 0;
+      transition: all .4s;
+  }
+
+  .mainMenu ul li:hover ul{
+      height: auto;
+      max-height: 200px;
+  }
+}
 .mainMenu h1{
     color: white;
     text-align: center;
@@ -31,13 +63,21 @@
     list-style: none;
 }
 
-
-.header-1 img{
-    width: 40px;
+.mainMenu ul ul{
+    position: absolute;
+    visibility: hidden;
 }
 
-.header-1 input[type="checkbox"]{
-    display: none;
+.mainMenu ul li:hover ul{
+    visibility: visible;
+}
+
+.mainMenu ul ul li{
+    float: none;
+}
+
+.mainMenu ul ul li a{
+    background-color: #832A95;
 }
 
 .mainMenu{
@@ -47,11 +87,6 @@
     left: -350px;
     position: absolute;
     transition: all .5s;
-}
-
-.header-1 input[type="checkbox"]:checked ~ .mainMenu
-{
-    transform: translateX(350px);
 }
 
 .mainMenu ul{
@@ -88,11 +123,11 @@
     padding: 10px;
     color: white;
 }
+/******************************************Fim do Menu**********************************************************/
 
 
 
-
-/*Informações do site*/
+/**************************************Informações do site******************************************************/
 .infoIcons{
     text-align: center;
     justify-content: center;
@@ -217,6 +252,9 @@
     text-align: center;
 }
 
+/******************************************Fim da infomações sobre o site*******************************************/
+
+/*******************************************Inicio da Parte Contato*************************************************/
 .formContato{
     margin-top: 50px;
     background-color: #049C9A;
@@ -264,7 +302,9 @@
     margin: 15px 0 50px 100px;
     padding: 15px;
 }
+/************************************************Fim Parte Conato***************************************************/
 
+/************************************************Inicio Rodapé******************************************************/
 .rodape {
     background-color: #049C9A;
     color: #fff;
@@ -292,3 +332,4 @@
     margin: 10px;
     border-radius: 50px;
 }
+/*************************************************Fim do Rodapé*******************************************************/

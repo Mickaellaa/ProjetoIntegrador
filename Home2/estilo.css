@@ -1,0 +1,369 @@
+/*Google Fonts Import Link*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+.menu{
+    background-color: #f3f3f5;
+    width: 100%;
+    height: 50px;
+}
+.btn{
+    position: absolute;
+    left: 45px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+    z-index: 999;
+}
+.btn.click{
+    left: 260px;
+}
+
+.btn span{
+    color: #8871a7;
+    font-size: 40px;
+    line-height: 38px;
+}
+
+.btn.click span::before{
+    content: '\f00d';
+}
+
+.sidebar .logo-details{
+    height:60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .logo-details img{
+    font-size: 30px;
+    color: #fff;
+    height: 70px;
+    min-width: 70px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name{
+    font-size: 22px;
+    color: #8871a7;
+    font-weight: 600;
+}
+
+
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background: #f3f3f5;
+    transition: left 0.4s ease;
+    z-index: 999;
+    
+}
+
+.sidebar.show{
+    left: 0px;
+}
+
+.sidebar .text{
+    color: #8871a7;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background: #f3f3f5;
+    letter-spacing: 1px;
+}
+
+nav ul{
+    background: #f3f3f5;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+nav ul li{
+    line-height: 60px;
+   border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+nav ul li:last-child{
+    border-bottom: 1px solid rgb(255, 255, 255, 0.05);
+} ;
+
+nav ul li a{
+    position: relative;
+    color: #8871a7;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+
+nav ul li.active a{
+    color: #8871a7;
+    background: #f3f3f5;
+    border-left-color: #8871a7;
+}
+
+nav ul ul{
+    position: static;
+    display: none;
+}
+
+nav ul .livros-show.show{
+    display: block;
+}
+
+nav ul .nov-show.show1{
+    display: block;
+}
+
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+
+nav ul ul li a{
+    font-size: 17px;
+    color: #8871a7;
+    padding-left: 80px;
+}
+
+nav ul li.active ul li a{
+    color: #8871a7 ;
+    background: #f3f3f5;
+    border-left-color: transparent;
+}
+
+nav ul li ul li a:hover{
+    content: #8871a7!important;
+    background: #f3f3f5 !important;
+}
+
+nav ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s;
+}
+
+nav ul li a span.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+/*Diferncial do site*/
+.infoIcons{
+    text-align: center;
+    justify-content: center;
+}
+
+.info1, .info3{
+    float: left;
+}
+
+.info1, .info2, .info3, .info4{
+    margin: 30px 80px 0 100px;
+
+}
+
+.icon-Info{
+    font-size: 60px;
+    padding: 10px;
+    color: #35c2a7;
+}
+
+.txtInfo{
+    color: #35c2a7;
+    font-size: 25px;
+    font-weight: 400;
+}
+/*Final do diferencial*/
+
+/***************************************Corpo do Site*************************************************************/
+.livrosQueTemos{
+    margin: 50px 200px 0 200px;
+}
+
+.livrosQueTemos h1{
+    text-align: center;
+    color: #35c2a7;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 550;
+    margin-bottom: 30px;
+}
+
+.livro1, .livro2, .livro3 {
+    border-bottom: 5px solid #f5f5f5;
+    padding: 35px;
+    margin-bottom: 30px;
+}
+
+.txtLivro p{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.txtLivro button{
+    background-color: #8871a7;
+    padding: 7px 25px 7px 25px;
+    border: none;
+    border-radius: 60px ;
+    color: white;
+}
+
+.txtLivro button:hover{
+    background-color: #2b81bc;
+    transition: all 0.3s;
+}
+
+.imgLivro{
+    text-align: center;
+}
+/***************************************Fim do Corpo do Site*****************************************************/
+
+/**************************************Informações do site******************************************************/
+.diversosLivros{
+    padding: 20px 200px 40px 200px;
+    background-color: #f5f5f5 ;
+    margin-top: -30px;
+}
+
+.diversosLivros h1{
+    text-align: center;
+    color: #35c2a7;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 550;
+    margin-bottom: 30px;
+}
+
+.diversosTxt p{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.diversosTxt button{
+    background-color: #8871a7;
+    padding: 7px 25px 7px 25px;
+    border: none;
+    border-radius: 60px ;
+    color: white;
+}
+
+.diversosTxt button:hover{
+    background-color: #2b81bc;
+    transition: all 0.3s;
+}
+
+.diversosImg{
+    text-align: center;
+}
+
+/******************************************Fim da infomações sobre o site*******************************************/
+
+
+
+/*******************************************Inicio da Parte Contato*************************************************/
+.formContato{
+    margin-top: 50px;
+    background-color: #35c2a7;
+}
+
+.formContato h1{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 550;
+    margin-bottom: 30px;
+    padding-top: 50px;
+}
+
+.formIcon label{
+    font-size: 18px;
+    color: white ;
+    margin-left: 100px;
+    
+}
+
+.formIcon input{
+    margin-left: 100px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 90%;
+    outline: 0;
+    margin-bottom: 50px;
+    padding: 15px;
+}
+
+.formIcon textarea{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: white;
+    border-radius: 5px;
+    height: 150px;
+    width: 90%;
+    outline: 0;
+    margin: 15px 0 50px 100px;
+    padding: 15px;
+}
+/************************************************Fim Parte Conato***************************************************/
+
+/************************************************Inicio Rodapé******************************************************/
+.rodape {
+    background-color: #35c2a7;
+    color: #fff;
+    padding: 30px;
+}
+
+.txtRodape p{
+    font-size: 18px;
+}
+
+.txtRodape .frase{
+    text-align: center;
+}
+
+.logoRodape{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.midiasSociais{
+    padding-left: 350px;
+    font-size: 25px;
+}
+
+.midiasSociais .midia{
+    background-color: white;
+    color: #049C9A;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+}
+/*************************************************Fim do Rodapé*******************************************************/
